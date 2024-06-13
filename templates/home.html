@@ -6,7 +6,18 @@
     
 
 {% block content %}
-    
-<h1> Hello There!!</h1>
+
+<h1> Hello 
+    {% if name %}
+        {{name}} 
+    {% else %} 
+        There!! 
+    {% endif %}
+ </h1>
+ <p> Add/Change Your Email: </p>
+ <form action="" method="post">
+    <input type="email" name="" value="{{email if email }}"  id="">
+ </form>
+
 {% endblock content %}
     
